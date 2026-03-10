@@ -19,6 +19,11 @@ This repository is a progression through the core pillars of Operating Systems:
 
 ## 🛠️ Building & Running
 
+0. **Prerequisites**
+   * GCC Compiler
+   * `ncurses` library (`libcurses`)
+   * Unix-like environment (Linux/macOS)
+
 1. **Clone**  
    ```bash
    git clone https://github.com/omiralles03/FSO_Practica2.git
@@ -39,8 +44,3 @@ This repository is a progression through the core pillars of Operating Systems:
    ```
 
 ---
-
-## 📝 Usage Examples
-
----
-
