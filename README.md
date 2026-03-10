@@ -1,19 +1,19 @@
 # Tron ASCII in C
 
-> A lightweight terminal-based “Tron” clone implemented in C to explore multi-process programming, shared memory, semaphores, and inter-process synchronization—all within a Unix `curses` interface.
+A lightweight terminal-based “Tron” clone implemented in C to explore multi-process programming, shared memory, semaphores, and inter-process synchronization—all within a Unix `curses` interface.
 
 ---
 
-## 🚀 Project Overview
+## Project Overview
+This repository is a progression through the core pillars of Operating Systems:
 
-1. **Phase 0**: Single-process, sequential game engine (`tron0.c`)  
-2. **Phase 1**: Forked processes for user and opponent(s) with independent execution (`tron1.c`)  
-3. **Phase 2**: Shared memory & semaphores for safe concurrent access to game state and the log file (`tron2.c`)  
-4. **Phase 3**: Decoupled executables—separate binaries for controller (`tron3`) and opponent agents (`oponent3`) communicating via `execlp` & a shared curses buffer
-
----
-
-## 📁 Repository Structure
+* **Process Management:** Evolution from single-process to `fork()` based architectures and external binary execution via `execlp()`.
+* **Concurrency & Synchronization:** Implementation of **Semaphores** to solve Race Conditions between threads.
+* **Inter-Process Communication (IPC):** * **Shared Memory:** Used for real-time game state synchronization between decoupled binaries.
+    * **Message Queues:** Implementation of message-passing for event signaling.
+* **Memory Management:** Custom shared memory segments and rigorous cleanup to avoid memory leaks in long-running processes.
+* **I/O Multiplexing:** Handling concurrent terminal input and log file writing without blocking the game loop.
+* **Custom libraries:** Usage of custom libraries for a modularized code for easier development.
 
 ---
 
@@ -43,3 +43,4 @@
 ## 📝 Usage Examples
 
 ---
+
